@@ -9,6 +9,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.io.File;
 
 
 public class GroundAllRules {
@@ -243,10 +244,11 @@ public class GroundAllRules {
 	
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		String fnRelationIDMap = "datasets\\fb15k\\relationid.txt";
-		String fnRuleType = "datasets\\fb15k\\fb15k_rule";
-		String fnTrainingTriples = "datasets\\fb15k\\train.txt";
-        String fnOutput = "datasets\\fb15k\\groundings.txt";
+		String fb_dir = "datasets" + File.separator + "fb15k";
+		String fnRelationIDMap = fb_dir + File.separator + "relationid.txt";
+		String fnRuleType = fb_dir + File.separator + "fb15k_rule";
+		String fnTrainingTriples = fb_dir + File.separator + "train.txt";
+        String fnOutput = fb_dir + File.separator + "groundings.txt";
 		
         long startTime = System.currentTimeMillis();
         GroundAllRules generator = new GroundAllRules();
