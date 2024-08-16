@@ -18,6 +18,7 @@ import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.io.File;
 
 public class ConvertDataForm {
 
@@ -129,15 +130,15 @@ public class ConvertDataForm {
 	}
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
-
-		String fn_Ent = "datasets\\yago37\\entityid.txt";
-		String fn_Rel = "datasets\\yago37\\relationid.txt";
-		String fn_train = "datasets\\yago37\\yago37_triples.train";
-		String fn_valid = "datasets\\yago37\\yago37_triples.valid";
-		String fn_test = "datasets\\yago37\\yago37_triples.test";
-		String fn_trainid = "datasets\\yago37\\train.txt";
-		String fn_validid = "datasets\\yago37\\valid.txt";
-		String fn_testid = "datasets\\yago37\\test.txt";
+		String yago_dir = "datasets" + File.separator + "yago37";
+		String fn_Ent = yago_dir + File.separator + "entityid.txt";
+		String fn_Rel = yago_dir + File.separator + "relationid.txt";
+		String fn_train = yago_dir + File.separator + "yago37_triples.train";
+		String fn_valid = yago_dir + File.separator + "yago37_triples.valid";
+		String fn_test = yago_dir + File.separator + "yago37_triples.test";
+		String fn_trainid = yago_dir + File.separator + "train.txt";
+		String fn_validid = yago_dir + File.separator + "valid.txt";
+		String fn_testid = yago_dir + File.separator + "test.txt";
 
 		ConvertDataForm infer = new ConvertDataForm();
         infer.convert_data(
